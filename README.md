@@ -4,6 +4,29 @@ convert-to-async
 originally from https://github.com/gmag11/FSBrowser/ trying to convert to ESPAsyncWebServer
 
 
+
+/Users/EvAkilli/Documents/Arduino/libraries/ESPAsyncWebServer-master/src/WebHandlers.cpp: In member function 'AsyncStaticWebHandler& AsyncStaticWebHandler::setLastModified(tm*)':
+/Users/EvAkilli/Documents/Arduino/libraries/ESPAsyncWebServer-master/src/WebHandlers.cpp:67:64: error: 'strftime' was not declared in this scope
+   strftime (result,30,"%a, %d %b %Y %H:%M:%S %Z", last_modified);
+                                                                ^
+/Users/EvAkilli/Documents/Arduino/libraries/ESPAsyncWebServer-master/src/WebHandlers.cpp: In member function 'AsyncStaticWebHandler& AsyncStaticWebHandler::setLastModified(time_t)':
+/Users/EvAkilli/Documents/Arduino/libraries/ESPAsyncWebServer-master/src/WebHandlers.cpp:72:60: error: 'gmtime' was not declared in this scope
+   return setLastModified((struct tm *)gmtime(&last_modified));
+                                                            ^
+/Users/EvAkilli/Documents/Arduino/libraries/ESPAsyncWebServer-master/src/WebHandlers.cpp: In member function 'AsyncStaticWebHandler& AsyncStaticWebHandler::setLastModified()':
+/Users/EvAkilli/Documents/Arduino/libraries/ESPAsyncWebServer-master/src/WebHandlers.cpp:77:25: error: 'time' was not declared in this scope
+   if(time(&last_modified) == 0) //time is not yet set
+                         ^
+                         
+                         
+                         
+                         
+                         ALL ERROR:
+                         
+                         
+                         
+                         
+
 Arduino: 1.6.8 (Mac OS X), Board: "NodeMCU 1.0 (ESP-12E Module), 80 MHz, 115200, 4M (3M SPIFFS)"
 
 /Applications/Arduino 2.app/Contents/Java/arduino-builder -dump-prefs -logger=machine -hardware "/Applications/Arduino 2.app/Contents/Java/hardware" -hardware "/Users/EvAkilli/Library/Arduino15/packages" -tools "/Applications/Arduino 2.app/Contents/Java/tools-builder" -tools "/Applications/Arduino 2.app/Contents/Java/hardware/tools/avr" -tools "/Users/EvAkilli/Library/Arduino15/packages" -built-in-libraries "/Applications/Arduino 2.app/Contents/Java/libraries" -libraries "/Users/EvAkilli/Documents/Arduino/libraries" -fqbn=esp8266:esp8266:nodemcuv2:CpuFrequency=80,UploadSpeed=115200,FlashSize=4M3M -ide-version=10608 -build-path "/var/folders/my/_g1m35d57k9353s6nkyym9d40000gn/T/builda64db6ffb95a9cc1c5dae71b2bea20c5.tmp" -warnings=default -prefs=build.warn_data_percentage=75 -verbose "/Users/EvAkilli/Documents/Arduino/FSBrowsersıfır/FSBrowser-SON/FSBrowser-SON.ino"
