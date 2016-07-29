@@ -31,8 +31,8 @@ unsigned char h2int(char c)
 
 void defaultConfig (){
 	// DEFAULT CONFIG
-	config.ssid = "EvAkilliCom";
-	config.password = "98765432";
+	config.ssid = "ssid";
+	config.password = "pass";
 	config.dhcp = true;
 	config.IP[0] = 192; config.IP[1] = 168; config.IP[2] = 4; config.IP[3] = 1;
 	config.Netmask[0] = 255; config.Netmask[1] = 255; config.Netmask[2] = 255; config.Netmask[3] = 0;
